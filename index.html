@@ -1033,109 +1033,6 @@
       </div>
 
       <div class="projects-grid">
-        <!-- Project 1 -->
-        <div class="project-card reveal">
-          <div>
-            <div class="project-date">March 2026</div>
-            <h3>Student Information System — 2-Tier on AWS</h3>
-            <p>
-              Full 2-tier web app built with Terraform IaC — Java/Tomcat on
-              public EC2, MariaDB RDS in private subnet, automated end-to-end.
-            </p>
-            <div class="project-bullet">
-              Custom VPC (192.34.0.0/16) with public/private subnets across 2
-              AZs, NAT Gateway, Internet Gateway, and route tables via Terraform
-            </div>
-            <div class="project-bullet">
-              Two security groups: web EC2 (SSH, HTTP, Tomcat 8080) + restricted
-              DB (3306 from web SG only)
-            </div>
-            <div class="project-bullet">
-              Inline Python in Terraform user_data dynamically injects RDS
-              credentials into Tomcat context.xml at boot
-            </div>
-            <div class="project-bullet">
-              EC2 bootstrap automates Java 17, Tomcat 9, Python3, MariaDB client
-              install + WAR deploy from S3
-            </div>
-            <br />
-            <div class="tag-list">
-              <span class="tag">Terraform</span><span class="tag">EC2</span
-              ><span class="tag">RDS MariaDB</span> <span class="tag">VPC</span
-              ><span class="tag">NAT Gateway</span
-              ><span class="tag">Tomcat 9</span> <span class="tag">Python</span
-              ><span class="tag">Bash</span>
-            </div>
-          </div>
-          <div class="project-number">01</div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project-card reveal">
-          <div>
-            <div class="project-date">February 2026</div>
-            <h3>Jenkins CI/CD Pipeline — Node.js Deployment</h3>
-            <p>
-              End-to-end CI/CD pipeline automating build and deployment of a
-              Node.js static website to AWS EC2 with zero manual steps.
-            </p>
-            <div class="project-bullet">
-              GitHub webhook integration triggers automatic pipeline on every
-              push to main branch
-            </div>
-            <div class="project-bullet">
-              Declarative Jenkinsfile with stages: Checkout → Install → Build →
-              Deploy
-            </div>
-            <div class="project-bullet">
-              Jenkins credential store manages GitHub SSH keys and EC2 access
-              for passwordless deploys
-            </div>
-            <br />
-            <div class="tag-list">
-              <span class="tag">Jenkins</span><span class="tag">GitHub</span
-              ><span class="tag">EC2</span> <span class="tag">CI/CD</span
-              ><span class="tag">Webhooks</span><span class="tag">Node.js</span>
-            </div>
-          </div>
-          <div class="project-number">02</div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project-card reveal">
-          <div>
-            <div class="project-date">November 2025</div>
-            <h3>Student Information System — 3-Tier on AWS</h3>
-            <p>
-              Fully functional 3-tier web application on AWS with web, app, and
-              database tiers — production-grade networking and security.
-            </p>
-            <div class="project-bullet">
-              Web + app servers on Linux EC2; Amazon RDS MariaDB with automated
-              backups
-            </div>
-            <div class="project-bullet">
-              Complete VPC networking: subnets, internet gateways, security
-              groups
-            </div>
-            <div class="project-bullet">
-              IAM roles + security group policies enforce least-privilege across
-              all tiers
-            </div>
-            <div class="project-bullet">
-              SSH server administration, system troubleshooting, CloudWatch
-              monitoring
-            </div>
-            <br />
-            <div class="tag-list">
-              <span class="tag">EC2</span><span class="tag">VPC</span
-              ><span class="tag">RDS</span> <span class="tag">CloudWatch</span
-              ><span class="tag">IAM</span><span class="tag">Linux</span>
-            </div>
-          </div>
-          <div class="project-number">03</div>
-        </div>
-
         <!-- Project 4 — Fresh Grocery Store -->
         <div class="project-card reveal">
           <div>
@@ -1171,14 +1068,14 @@
             </div>
             <div class="project-links">
               <a
-                href="https://github.com/aryakonly/grocery-app"
+                href="https://github.com/aryakonly/two-tier-flask-mysql-docker.git"
                 target="_blank"
                 class="project-link"
                 >⬡ GitHub</a
               >
             </div>
           </div>
-          <div class="project-number">04</div>
+          <div class="project-number">01</div>
         </div>
 
         <!-- Project 5 — Employee Manager -->
@@ -1211,14 +1108,14 @@
             </div>
             <div class="project-links">
               <a
-                href="https://github.com/aryakonly/employee-manager"
+                href="https://github.com/aryakonly/flask-app-docker.git"
                 target="_blank"
                 class="project-link"
                 >⬡ GitHub</a
               >
             </div>
           </div>
-          <div class="project-number">05</div>
+          <div class="project-number">02</div>
         </div>
 
         <!-- Project 6 — Simple Java Docker -->
@@ -1252,7 +1149,133 @@
             </div>
             <div class="project-links">
               <a
-                href="https://github.com/aryakonly/simple-java-docker"
+                href="https://github.com/aryakonly/simple-java-docker.git"
+                target="_blank"
+                class="project-link"
+                >⬡ GitHub</a
+              >
+            </div>
+          </div>
+          <div class="project-number">03</div>
+        </div>
+        <!-- Project 1 -->
+        <div class="project-card reveal">
+          <div>
+            <div class="project-date">March 2026</div>
+            <h3>Student Information System — 2-Tier on AWS</h3>
+            <p>
+              Full 2-tier web app built with Terraform IaC — Java/Tomcat on
+              public EC2, MariaDB RDS in private subnet, automated end-to-end.
+            </p>
+            <div class="project-bullet">
+              Custom VPC (192.34.0.0/16) with public/private subnets across 2
+              AZs, NAT Gateway, Internet Gateway, and route tables via Terraform
+            </div>
+            <div class="project-bullet">
+              Two security groups: web EC2 (SSH, HTTP, Tomcat 8080) + restricted
+              DB (3306 from web SG only)
+            </div>
+            <div class="project-bullet">
+              Inline Python in Terraform user_data dynamically injects RDS
+              credentials into Tomcat context.xml at boot
+            </div>
+            <div class="project-bullet">
+              EC2 bootstrap automates Java 17, Tomcat 9, Python3, MariaDB client
+              install + WAR deploy from S3
+            </div>
+            <br />
+            <div class="tag-list">
+              <span class="tag">Terraform</span><span class="tag">EC2</span
+              ><span class="tag">RDS MariaDB</span> <span class="tag">VPC</span
+              ><span class="tag">NAT Gateway</span
+              ><span class="tag">Tomcat 9</span> <span class="tag">Python</span
+              ><span class="tag">Bash</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/aryakonly/student-registration-aws-terraform.git"
+                target="_blank"
+                class="project-link"
+                >⬡ GitHub</a
+              >
+            </div>
+          </div>
+          <div class="project-number">04</div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card reveal">
+          <div>
+            <div class="project-date">February 2026</div>
+            <h3>Jenkins CI/CD Pipeline — Node.js Deployment</h3>
+            <p>
+              End-to-end CI/CD pipeline automating build and deployment of a
+              Node.js static website to AWS EC2 with zero manual steps.
+            </p>
+            <div class="project-bullet">
+              GitHub webhook integration triggers automatic pipeline on every
+              push to main branch
+            </div>
+            <div class="project-bullet">
+              Declarative Jenkinsfile with stages: Checkout → Install → Build →
+              Deploy
+            </div>
+            <div class="project-bullet">
+              Jenkins credential store manages GitHub SSH keys and EC2 access
+              for passwordless deploys
+            </div>
+            <br />
+            <div class="tag-list">
+              <span class="tag">Jenkins</span><span class="tag">GitHub</span
+              ><span class="tag">EC2</span> <span class="tag">CI/CD</span
+              ><span class="tag">Webhooks</span><span class="tag">Node.js</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/aryakonly/nodejs-jenkins.git"
+                target="_blank"
+                class="project-link"
+                >⬡ GitHub</a
+              >
+            </div>
+          </div>
+          <div class="project-number">05</div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card reveal">
+          <div>
+            <div class="project-date">November 2025</div>
+            <h3>Student Information System — 3-Tier on AWS</h3>
+            <p>
+              Fully functional 3-tier web application on AWS with web, app, and
+              database tiers — production-grade networking and security.
+            </p>
+            <div class="project-bullet">
+              Web + app servers on Linux EC2; Amazon RDS MariaDB with automated
+              backups
+            </div>
+            <div class="project-bullet">
+              Complete VPC networking: subnets, internet gateways, security
+              groups
+            </div>
+            <div class="project-bullet">
+              IAM roles + security group policies enforce least-privilege across
+              all tiers
+            </div>
+            <div class="project-bullet">
+              SSH server administration, system troubleshooting, CloudWatch
+              monitoring
+            </div>
+            <br />
+            <div class="tag-list">
+              <span class="tag">EC2</span><span class="tag">VPC</span
+              ><span class="tag">RDS</span> <span class="tag">CloudWatch</span
+              ><span class="tag">IAM</span><span class="tag">Linux</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/aryakonly/3-tier-project.git"
                 target="_blank"
                 class="project-link"
                 >⬡ GitHub</a
