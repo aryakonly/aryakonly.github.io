@@ -40,7 +40,6 @@
         overflow-x: hidden;
       }
 
-      /* GRID BACKGROUND */
       body::before {
         content: "";
         position: fixed;
@@ -53,7 +52,6 @@
         z-index: 0;
       }
 
-      /* NAV */
       nav {
         position: fixed;
         top: 0;
@@ -96,7 +94,6 @@
         color: var(--accent);
       }
 
-      /* HERO */
       .hero {
         position: relative;
         min-height: 100vh;
@@ -214,7 +211,6 @@
         transform: translateY(-2px);
       }
 
-      /* HERO VISUAL */
       .hero-visual {
         position: absolute;
         right: 4rem;
@@ -225,7 +221,6 @@
         animation: fadeIn 1s ease 0.4s both;
       }
 
-      /* SECTIONS */
       section {
         position: relative;
         z-index: 1;
@@ -251,7 +246,6 @@
         line-height: 1.1;
       }
 
-      /* SKILLS */
       .skills-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -319,7 +313,6 @@
         color: var(--text);
       }
 
-      /* PROJECTS */
       .projects-grid {
         display: grid;
         gap: 1.5rem;
@@ -407,7 +400,28 @@
         white-space: nowrap;
       }
 
-      /* EXPERIENCE TIMELINE */
+      .project-links {
+        display: flex;
+        gap: 0.75rem;
+        margin-top: 1.25rem;
+      }
+
+      .project-link {
+        font-family: "Space Mono", monospace;
+        font-size: 0.65rem;
+        padding: 0.3rem 0.75rem;
+        border: 1px solid var(--border);
+        border-radius: 2px;
+        color: var(--accent);
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+
+      .project-link:hover {
+        background: rgba(0, 212, 255, 0.1);
+        border-color: var(--accent);
+      }
+
       .timeline {
         position: relative;
         padding-left: 2rem;
@@ -471,7 +485,6 @@
         line-height: 1.7;
       }
 
-      /* CONTACT */
       .contact-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -523,7 +536,6 @@
         font-weight: 600;
       }
 
-      /* FOOTER */
       footer {
         position: relative;
         z-index: 1;
@@ -539,7 +551,6 @@
         color: var(--accent);
       }
 
-      /* STATS BAR */
       .stats-bar {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -572,7 +583,6 @@
         letter-spacing: 0.1em;
       }
 
-      /* ANIMATIONS */
       @keyframes fadeUp {
         from {
           opacity: 0;
@@ -619,7 +629,6 @@
           float 6s ease-in-out 1.4s infinite;
       }
 
-      /* SCROLL REVEAL */
       .reveal {
         opacity: 0;
         transform: translateY(30px);
@@ -633,7 +642,55 @@
         transform: translateY(0);
       }
 
-      /* RESPONSIVE */
+      /* LIGHT MODE */
+      body.light {
+        --bg: #f8fafc;
+        --surface: #ffffff;
+        --surface2: #f1f5f9;
+        --accent: #0284c7;
+        --accent2: #ea580c;
+        --accent3: #7c3aed;
+        --text: #0f172a;
+        --muted: #64748b;
+        --border: rgba(2, 132, 199, 0.2);
+      }
+
+      body.light::before {
+        background-image:
+          linear-gradient(rgba(2, 132, 199, 0.04) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(2, 132, 199, 0.04) 1px, transparent 1px);
+      }
+
+      body.light nav {
+        background: rgba(248, 250, 252, 0.9);
+      }
+
+      /* TOGGLE BUTTON */
+      .theme-toggle {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 200;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        color: var(--text);
+        font-size: 1.2rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        transition: all 0.2s;
+      }
+
+      .theme-toggle:hover {
+        border-color: var(--accent);
+        transform: scale(1.1);
+      }
+
       @media (max-width: 768px) {
         nav {
           padding: 1rem 1.5rem;
@@ -681,10 +738,7 @@
     <div class="hero">
       <div class="hero-content">
         <div class="hero-tag">Available for opportunities</div>
-        <h1>
-          Arya<br />
-          <span>Kadam</span>
-        </h1>
+        <h1>Arya<br /><span>Kadam</span></h1>
         <p class="hero-sub">
           Cloud &amp; System Administrator building scalable, automated
           infrastructure on AWS. DevOps learner. Always deploying something.
@@ -703,14 +757,12 @@
         </div>
       </div>
 
-      <!-- SVG ILLUSTRATION -->
       <div class="hero-visual">
         <svg
           viewBox="0 0 380 380"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <!-- Cloud shape -->
           <circle
             cx="190"
             cy="140"
@@ -728,7 +780,6 @@
             stroke-width="1"
             opacity="0.2"
           />
-          <!-- AWS icon-like shape -->
           <rect
             x="155"
             y="110"
@@ -770,7 +821,6 @@
           >
             EC2 · VPC · RDS
           </text>
-          <!-- Connecting lines to nodes -->
           <line
             x1="190"
             y1="195"
@@ -798,7 +848,6 @@
             stroke-width="1"
             opacity="0.3"
           />
-          <!-- Nodes -->
           <rect
             x="68"
             y="250"
@@ -859,7 +908,6 @@
           >
             Docker
           </text>
-          <!-- Outer ring -->
           <circle
             cx="190"
             cy="190"
@@ -869,7 +917,6 @@
             stroke-dasharray="2 12"
             opacity="0.2"
           />
-          <!-- Small orbiting dots -->
           <circle cx="80" cy="100" r="3" fill="#00d4ff" opacity="0.5" />
           <circle cx="310" cy="180" r="3" fill="#ff6b35" opacity="0.5" />
           <circle cx="150" cy="320" r="3" fill="#7c3aed" opacity="0.5" />
@@ -891,8 +938,8 @@
           ><span class="stat-label">AWS Services</span>
         </div>
         <div class="stat">
-          <span class="stat-num">3</span
-          ><span class="stat-label">Cloud Projects</span>
+          <span class="stat-num">6</span
+          ><span class="stat-label">Projects</span>
         </div>
         <div class="stat">
           <span class="stat-num">7.8</span><span class="stat-label">CGPA</span>
@@ -935,7 +982,9 @@
             <span class="tag">Jenkins</span><span class="tag">Git</span>
             <span class="tag">GitHub</span
             ><span class="tag">CI/CD Pipelines</span>
-            <span class="tag">Docker</span><span class="tag">Webhooks</span>
+            <span class="tag">Docker</span
+            ><span class="tag">Docker Compose</span
+            ><span class="tag">Webhooks</span>
           </div>
         </div>
         <div class="skill-card">
@@ -954,7 +1003,8 @@
           <div class="skill-icon">🐍</div>
           <h3>Programming & Scripting</h3>
           <div class="tag-list">
-            <span class="tag">Python</span><span class="tag">Bash</span>
+            <span class="tag">Python</span><span class="tag">Java</span
+            ><span class="tag">Bash</span>
             <span class="tag">Shell Scripting</span
             ><span class="tag">MySQL</span>
             <span class="tag">Amazon RDS MariaDB</span>
@@ -1085,6 +1135,132 @@
           </div>
           <div class="project-number">03</div>
         </div>
+
+        <!-- Project 4 — Fresh Grocery Store -->
+        <div class="project-card reveal">
+          <div>
+            <div class="project-date">April 2026</div>
+            <h3>Fresh Grocery Store — Flask + MySQL + Docker</h3>
+            <p>
+              Full-stack CRUD app for grocery inventory. Flask and MySQL run in
+              separate containers connected via a custom Docker bridge network —
+              MySQL never exposed externally.
+            </p>
+            <div class="project-bullet">
+              Custom Docker bridge network (grocery_network) — Flask reaches
+              MySQL by container name, no IP hardcoding
+            </div>
+            <div class="project-bullet">
+              Docker Compose orchestrates both containers; named volume persists
+              MySQL data across restarts
+            </div>
+            <div class="project-bullet">
+              Auto-retry DB connection on startup (10 attempts, 3s delay)
+              handles MySQL boot lag
+            </div>
+            <div class="project-bullet">
+              Add, edit, delete products with category filtering across Fruits,
+              Vegetables, Bakery
+            </div>
+            <br />
+            <div class="tag-list">
+              <span class="tag">Python</span><span class="tag">Flask</span
+              ><span class="tag">MySQL</span> <span class="tag">Docker</span
+              ><span class="tag">Docker Compose</span
+              ><span class="tag">Jinja2</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/aryakonly/grocery-app"
+                target="_blank"
+                class="project-link"
+                >⬡ GitHub</a
+              >
+            </div>
+          </div>
+          <div class="project-number">04</div>
+        </div>
+
+        <!-- Project 5 — Employee Manager -->
+        <div class="project-card reveal">
+          <div>
+            <div class="project-date">April 2026</div>
+            <h3>Employee Manager — Flask + Docker + JSON Storage</h3>
+            <p>
+              Lightweight CRUD app to manage employee records. No database
+              needed — data lives in a JSON file. Fully containerized, runs
+              anywhere Docker is installed.
+            </p>
+            <div class="project-bullet">
+              Add, view, delete employees with fields for department, position,
+              salary, joining date
+            </div>
+            <div class="project-bullet">
+              JSON file storage with Docker volume mount for persistence across
+              container restarts
+            </div>
+            <div class="project-bullet">
+              REST-style routes, form handling, Jinja2 templating — covers the
+              full Flask request cycle
+            </div>
+            <br />
+            <div class="tag-list">
+              <span class="tag">Python</span><span class="tag">Flask</span
+              ><span class="tag">Docker</span> <span class="tag">JSON</span
+              ><span class="tag">Jinja2</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/aryakonly/employee-manager"
+                target="_blank"
+                class="project-link"
+                >⬡ GitHub</a
+              >
+            </div>
+          </div>
+          <div class="project-number">05</div>
+        </div>
+
+        <!-- Project 6 — Simple Java Docker -->
+        <div class="project-card reveal">
+          <div>
+            <div class="project-date">April 2026</div>
+            <h3>Simple Java Docker — Containerized Java App</h3>
+            <p>
+              Java app containerized with Docker that prints current date/time
+              and fetches live location data via IP geolocation API — no API key
+              required.
+            </p>
+            <div class="project-bullet">
+              Built on eclipse-temurin:17-jdk-alpine; compiled and run entirely
+              inside Docker
+            </div>
+            <div class="project-bullet">
+              Calls ipinfo.io at runtime to display city, region, and timezone
+              from container's network
+            </div>
+            <div class="project-bullet">
+              Uses --network host flag so container reads real IP, not Docker
+              NAT address
+            </div>
+            <br />
+            <div class="tag-list">
+              <span class="tag">Java 17</span><span class="tag">Docker</span
+              ><span class="tag">Alpine Linux</span>
+              <span class="tag">HTTP API</span
+              ><span class="tag">ipinfo.io</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/aryakonly/simple-java-docker"
+                target="_blank"
+                class="project-link"
+                >⬡ GitHub</a
+              >
+            </div>
+          </div>
+          <div class="project-number">06</div>
+        </div>
       </div>
     </section>
 
@@ -1182,8 +1358,26 @@
       <span>2026</span>
     </footer>
 
+    <!-- THEME TOGGLE -->
+    <button class="theme-toggle" id="themeBtn" title="Toggle light/dark">
+      🌙
+    </button>
+
     <script>
-      // Scroll reveal
+      // Theme toggle
+      const btn = document.getElementById("themeBtn");
+      const saved = localStorage.getItem("theme");
+      if (saved === "light") {
+        document.body.classList.add("light");
+        btn.textContent = "☀️";
+      }
+      btn.addEventListener("click", () => {
+        document.body.classList.toggle("light");
+        const isLight = document.body.classList.contains("light");
+        btn.textContent = isLight ? "☀️" : "🌙";
+        localStorage.setItem("theme", isLight ? "light" : "dark");
+      });
+
       const reveals = document.querySelectorAll(".reveal");
       const observer = new IntersectionObserver(
         (entries) => {
